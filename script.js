@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. LOADER PREMIUM ---
+    // --- LOADER PREMIUM ---
     setTimeout(() => {
         const loader = document.getElementById('loader');
         if (loader) {
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 1200);
 
-    // --- 2. STATUT OUVERTURE DYNAMIQUE ---
+    // --- STATUT OUVERTURE DYNAMIQUE ---
     const updateStatus = () => {
         const badge = document.getElementById('status-badge');
         if (!badge) return;
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     updateStatus();
 
-    // --- 3. MENU BURGER MOBILE ---
+    // --- MENU BURGER MOBILE ---
     const menuToggle = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
     if (menuToggle && navList) {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 4. CARROUSEL AVEC SWIPE & RESET CHRONO ---
+    // --- CARROUSEL AVEC SWIPE & RESET ---
     const slides = document.querySelectorAll('.carousel-slide');
     const carouselContainer = document.getElementById('main-carousel');
     let currentIndex = 0;
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, {passive: true});
     }
 
-    // --- 5. FAQ ---
+    // --- FAQ ---
     document.querySelectorAll('.faq-question').forEach(q => {
         q.addEventListener('click', () => {
             const answer = q.nextElementSibling;
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 6. SCROLL REVEAL & PROGRESS BAR ---
+    // --- SCROLL REVEAL & PROGRESS BAR ---
     const handleScroll = () => {
         const progressBar = document.getElementById('scroll-progress-bar');
         if (progressBar) {
