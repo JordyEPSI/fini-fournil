@@ -123,3 +123,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const backBtn = document.getElementById('backToTop');
     if (backBtn) backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 });
+
+// Affichage du nom du fichier sélectionné
+const fileInput = document.getElementById('file-upload');
+const fileNameDisplay = document.getElementById('file-name-display');
+
+if (fileInput && fileNameDisplay) {
+    fileInput.addEventListener('change', (e) => {
+        const name = e.target.files[0]?.name || "Aucun fichier choisi (PDF uniquement)";
+        fileNameDisplay.innerText = name;
+        fileNameDisplay.style.color = "#C5A059"; // Couleur Or quand un fichier est choisi
+    });
+}
