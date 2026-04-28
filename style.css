@@ -115,6 +115,42 @@ header { background: rgba(26,26,27,0.98); padding: 1rem 0; border-bottom: 1px so
 .btn-gps { display: flex; align-items: center; justify-content: center; background: #34495e; color: white; padding: 1rem; border-radius: 8px; font-weight: bold; margin: 1rem 0; transition: var(--transition); }
 .btn-gps:hover { background: var(--or); color: var(--noir); }
 
+/* STYLE DÉPÔT DE FICHIER */
+.file-upload-wrapper {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+#file-upload {
+    display: none; /* On cache l'input moche par défaut */
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px dashed var(--or);
+    color: var(--or);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: var(--transition);
+    width: 100%;
+    text-align: center;
+}
+
+.custom-file-upload:hover {
+    background: rgba(197, 160, 89, 0.1);
+}
+
+#file-name-display {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #aaa;
+    text-align: center;
+}
+
 /* FOOTER LOGOS */
 footer { padding: 4rem 0; text-align: center; border-top: 1px solid var(--or); background: #111; }
 .footer-socials { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; }
