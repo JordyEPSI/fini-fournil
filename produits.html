@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Produits - Snacking, Boulangerie & Pâtisserie Fine | Fournil des Frères Montpellier</title>
+    <title>Nos Produits - Snacking & Pâtisserie | Fournil des Frères</title>
     
-    <meta name="description" content="Découvrez notre carte complète : sandwiches frais, wraps, pizzas, viennoiseries pur beurre (croissants, pains au chocolat), trompe l'œil citron et pâtisseries artisanales préparées chaque jour à Montpellier.">
-    <meta name="keywords" content="carte boulangerie montpellier, menu snacking, sandwich frais, pain au chocolat artisan, trompe l'oeil citron montpellier, pâtisserie fait maison, Fournil des Frères produits">
-
+    <meta name="description" content="Découvrez notre carte : sandwiches frais, wraps, viennoiseries (croissants), trompe l'œil citron et pâtisseries artisanales à Montpellier.">
     <link rel="icon" type="image/jpeg" href="FDF_logo.jpg">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
@@ -16,7 +14,7 @@
 <body>
 
     <div id="loader">
-        <img src="FDF_logo.jpg" alt="Chargement Fournil des Frères" class="loader-logo">
+        <img src="FDF_logo.jpg" alt="Chargement" class="loader-logo">
     </div>
 
     <div id="scroll-progress-bar"></div>
@@ -26,6 +24,11 @@
             <div class="logo-area">
                 <a href="index.html"><img src="FDF_logo.jpg" alt="Logo Fournil des Frères" class="logo"></a>
             </div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <nav class="desktop-nav">
                 <ul id="nav-list">
                     <li><a href="index.html">Accueil</a></li>
@@ -41,14 +44,15 @@
         <a href="index.html"><i class="fas fa-home"></i><span>Accueil</span></a>
         <a href="produits.html" style="color:var(--or);"><i class="fas fa-bread-slice"></i><span>Produits</span></a>
         <a href="index.html#avis"><i class="fas fa-star"></i><span>Avis</span></a>
-        <a href="#contact"><i class="fas fa-map-marker-alt"></i><span>Accès</span></a>
+        <a href="index.html#contact"><i class="fas fa-map-marker-alt"></i><span>Accès</span></a>
     </div>
 
     <main class="container section">
         <h2 class="title">Le Côté Salé & Snacking</h2>
         <div class="product-grid">
+            
             <article class="product-card reveal">
-                <img src="sandwich-poulet-curry-graines.jpg" alt="Sandwich Poulet Curry Fait Maison Montpellier Snacking généreux" loading="lazy">
+                <img src="sandwich-poulet-curry-graines.jpg" alt="Sandwich Poulet Curry Fait Maison Montpellier" loading="lazy">
                 <div class="product-info">
                     <h3>Le Poulet Curry</h3>
                     <p>Baguette aux graines, émincé de poulet au curry maison, concombre et salade fraîche.</p>
@@ -56,7 +60,7 @@
             </article>
 
             <article class="product-card reveal">
-                <img src="sandwich-saumon-fume-graines.jpg" alt="Sandwich Saumon Fumé Fromage Frais traiteur Montpellier frais" loading="lazy">
+                <img src="sandwich-saumon-fume-graines.jpg" alt="Sandwich Saumon Fumé" loading="lazy">
                 <div class="product-info">
                     <h3>Le Nordique Saumon</h3>
                     <p>Saumon fumé de qualité, fromage frais aux herbes et oignons frits.</p>
@@ -64,15 +68,15 @@
             </article>
 
             <article class="product-card reveal">
-                <img src="sandwich-thon-crudites-baguette.jpg" alt="Sandwich Thon Crudités Baguette Tradition fait maison" loading="lazy">
+                <img src="sandwich-thon-crudites-baguette.jpg" alt="Sandwich Thon Crudités" loading="lazy">
                 <div class="product-info">
                     <h3>Le Classique Thon</h3>
-                    <p>Baguette tradition, thon émietté, mayonnaise légère et crudités croquantes.</p>
+                    <p>Baguette tradition, thon émietté, mayonnaise légère et crudités.</p>
                 </div>
             </article>
 
             <article class="product-card reveal">
-                <img src="wrap-poulet-crudites.jpg" alt="Wrap Poulet Crudités frais à emporter midi" loading="lazy">
+                <img src="wrap-poulet-crudites.jpg" alt="Wrap Poulet Crudités" loading="lazy">
                 <div class="product-info">
                     <h3>Wrap Poulet Frais</h3>
                     <p>Galette de blé fondante, poulet émincé, sauce césar et salade.</p>
@@ -80,7 +84,7 @@
             </article>
 
             <article class="product-card reveal">
-                <img src="croque-monsieur-maison.jpg" alt="Croque-Monsieur gratiné artisanal emmental" loading="lazy">
+                <img src="croque-monsieur-maison.jpg" alt="Croque-Monsieur" loading="lazy">
                 <div class="product-info">
                     <h3>Croque-Monsieur Maison</h3>
                     <p>Pain de mie artisanal, jambon blanc, béchamel et emmental gratiné.</p>
@@ -88,18 +92,19 @@
             </article>
 
             <article class="product-card reveal">
-                <img src="part-pizza-artisanale-poivrons.jpg" alt="Part de Pizza artisanale Poivrons Fromage cuisson four" loading="lazy">
+                <img src="part-pizza-artisanale-poivrons.jpg" alt="Part de Pizza artisanale" loading="lazy">
                 <div class="product-info">
                     <h3>Pizza Poivrons</h3>
-                    <p>Pâte à pizza boulangère, sauce tomate cuisinée, trio de poivrons et mozzarella.</p>
+                    <p>Pâte à pizza boulangère, sauce tomate cuisinée, poivrons et mozzarella.</p>
                 </div>
             </article>
         </div>
 
-        <h2 class="title" style="margin-top: 60px;">Boulangerie & Viennoiserie Pur Beurre</h2>
+        <h2 class="title" style="margin-top: 60px;">Boulangerie & Viennoiserie</h2>
         <div class="product-grid">
+            
             <article class="product-card reveal">
-                <img src="croissant-beurre-frais-artisan.jpg" alt="Croissant au beurre frais artisan boulanger fait maison matin" loading="lazy">
+                <img src="croissant-beurre-frais-artisan.jpg" alt="Croissant au beurre frais" loading="lazy">
                 <div class="product-info">
                     <h3>Croissant au Beurre</h3>
                     <p>Viennoiserie classique pur beurre, feuilletage croustillant et fondant.</p>
@@ -107,26 +112,19 @@
             </article>
 
             <article class="product-card reveal">
-                <img src="croissant-aux-amandes-montpellier.jpg" alt="Croissant aux Amandes généreux crème d'amande spécialité" loading="lazy">
+                <img src="croissant-aux-amandes-montpellier.jpg" alt="Croissant aux Amandes" loading="lazy">
                 <div class="product-info">
                     <h3>Croissant aux Amandes</h3>
                     <p>Notre spécialité ! Crème d'amande généreuse, amandes effilées et sucre glace.</p>
                 </div>
             </article>
-
-            <article class="product-card reveal">
-                <img src="pain-au-chocolat-artisan.jpg" alt="Pain au Chocolat artisanal pur beurre Chocolatine fait maison" loading="lazy">
-                <div class="product-info">
-                    <h3>Pain au Chocolat</h3>
-                    <p>Viennoiserie feuilletée pur beurre avec deux barres de chocolat intense.</p>
-                </div>
-            </article>
         </div>
 
-        <h2 class="title" style="margin-top: 60px;">Pâtisserie Fine & Desserts Gourmands</h2>
+        <h2 class="title" style="margin-top: 60px;">Pâtisserie Fine & Gourmandises</h2>
         <div class="product-grid">
+            
             <article class="product-card reveal">
-                <img src="trompe-loeil-citron-patisserie-fine.jpg" alt="Pâtisserie fine Trompe l'oeil Citron Cédrat visuel incroyable" loading="lazy">
+                <img src="trompe-loeil-citron-patisserie-fine.jpg" alt="Trompe l'oeil Citron" loading="lazy">
                 <div class="product-info">
                     <h3>Trompe l'œil Citron</h3>
                     <p>Notre chef vous surprend avec ce dessert visuel bluffant au cœur citron intense.</p>
@@ -134,7 +132,7 @@
             </article>
 
             <article class="product-card reveal">
-                <img src="entremet-coco-passion-exotique.jpg" alt="Entremet exotique Coco Passion mousse légère dessert" loading="lazy">
+                <img src="entremet-coco-passion-exotique.jpg" alt="Entremet Coco Passion" loading="lazy">
                 <div class="product-info">
                     <h3>Entremet Coco Passion</h3>
                     <p>Mousse légère à la noix de coco et cœur fondant au fruit de la passion.</p>
@@ -142,39 +140,15 @@
             </article>
 
             <article class="product-card reveal">
-                <img src="entremet-chocolat-brillant.jpg" alt="Entremet Chocolat Brillant pâtisserie fine fève cacao" loading="lazy">
+                <img src="entremet-chocolat-brillant.jpg" alt="Entremet Chocolat" loading="lazy">
                 <div class="product-info">
                     <h3>Le Suprême Chocolat</h3>
-                    <p>Entremet signature : mousse chocolat noir intense, biscuit fondant et glaçage miroir bronze.</p>
+                    <p>Entremet signature : mousse chocolat noir intense, biscuit fondant et glaçage miroir.</p>
                 </div>
             </article>
 
             <article class="product-card reveal">
-                <img src="assortiment-patisseries-individuelles.jpg" alt="Assortiment pâtisseries individuelles éclairs tartelettes" loading="lazy">
-                <div class="product-info">
-                    <h3>Pâtisseries Individuelles</h3>
-                    <p>Éclairs, choux, tartelettes... selon l'inspiration du jour de notre pâtissier.</p>
-                </div>
-            </article>
-
-            <article class="product-card reveal">
-                <img src="tartelette-fraises-creme-patissiere.jpg" alt="Tartelette aux Fraises fraîches crème pâtissière saison" loading="lazy">
-                <div class="product-info">
-                    <h3>Tartelette Fraises</h3>
-                    <p>Pâte sablée croustillante, crème pâtissière onctueuse et fraises fraîches de saison.</p>
-                </div>
-            </article>
-
-            <article class="product-card reveal">
-                <img src="tartelette-fruits-frais-saison.jpg" alt="Tartelette Fruits Frais de Saison multifruits" loading="lazy">
-                <div class="product-info">
-                    <h3>Tartelette Multifruits</h3>
-                    <p>Un cocktail coloré de fruits frais (kiwi, fraise, raisin, pêche) sur crème.</p>
-                </div>
-            </article>
-
-            <article class="product-card reveal">
-                <img src="tartelette-cacahuete-caramel.jpg" alt="Tartelette Cacahuète Caramel Chocolat façon Snickers" loading="lazy">
+                <img src="tartelette-cacahuete-caramel.jpg" alt="Tartelette Cacahuète Caramel" loading="lazy">
                 <div class="product-info">
                     <h3>Tarte Cacahuète Caramel</h3>
                     <p>Base croustillante, cœur caramel fondant, éclats de cacahuètes et chocolat.</p>
@@ -182,18 +156,18 @@
             </article>
 
             <article class="product-card reveal">
-                <img src="cookies-artisanaux-chocolat-montpellier.jpg" alt="Cookies artisanaux tout chocolat pépites gourmand" loading="lazy">
+                <img src="cookies-artisanaux-chocolat-montpellier.jpg" alt="Cookies artisanaux" loading="lazy">
                 <div class="product-info">
                     <h3>Cookies Artisanaux</h3>
-                    <p>Moelleux à l'intérieur, croustillants à l'extérieur, généreux en pépites de chocolat.</p>
+                    <p>Moelleux à l'intérieur, croustillants, généreux en pépites de chocolat.</p>
                 </div>
             </article>
 
             <article class="product-card reveal">
-                <img src="assortiment-donuts-gourmands.jpg" alt="Assortiment de Donuts Glacés gourmands couleurs" loading="lazy">
+                <img src="assortiment-donuts-gourmands.jpg" alt="Donuts Glacés" loading="lazy">
                 <div class="product-info">
                     <h3>Donuts Gourmands</h3>
-                    <p>Beignets glacés variés (Chocolat, Fraise, Caramel...) pour une pause sucrée.</p>
+                    <p>Beignets glacés variés pour une pause sucrée qui plaît à tous.</p>
                 </div>
             </article>
         </div>
