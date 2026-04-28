@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fournil des Frères | Artisan Boulanger Pâtissier Montpellier</title>
+    <title>Fournil des Frères | Artisan Boulanger Pâtissier Montpellier | Fait Maison</title>
     
-    <meta name="description" content="Boulangerie artisanale au 2596 Avenue de l'Europe, Montpellier. Produits 100% maison, tradition et qualité.">
+    <meta name="description" content="Découvrez le Fournil des Frères, artisan boulanger au 2596 Avenue de l'Europe à Montpellier. Sandwiches maison, viennoiseries, pâtisseries et pain au levain 100% fait maison.">
+    <meta name="keywords" content="boulangerie montpellier, sandwich montpellier, pâtisserie artisanale, croissant aux amandes, pain au levain montpellier, snacking fait maison">
 
     <link rel="icon" type="image/jpeg" href="FDF_logo.jpg">
     <link rel="stylesheet" href="style.css">
@@ -17,13 +18,18 @@
       "@context": "https://schema.org",
       "@type": "Bakery",
       "name": "Fournil des Frères",
-      "image": "https://jordyepsi.github.io/fournil-des-freres/FDF_logo.jpg",
+      "image": "https://jordyepsi.github.io/fournil-des-freres/croissant-aux-amandes-montpellier.jpg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "2596 Avenue de l'Europe",
         "addressLocality": "Montpellier",
         "postalCode": "34080",
         "addressCountry": "FR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "128"
       },
       "openingHours": "Mo-Fr 06:00-20:00, Sa-Su 07:00-20:00",
       "telephone": "+33652292438"
@@ -41,7 +47,7 @@
     <header id="header">
         <div class="container header-flex">
             <div class="logo-area">
-                <img src="FDF_logo.jpg" alt="Logo Fournil des Frères" class="logo">
+                <a href="index.html"><img src="FDF_logo.jpg" alt="Logo Fournil des Frères" class="logo"></a>
             </div>
             
             <div class="menu-toggle" id="mobile-menu">
@@ -51,7 +57,7 @@
             <nav class="desktop-nav">
                 <ul id="nav-list">
                     <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#produits">Produits</a></li>
+                    <li><a href="produits.html">Nos Produits</a></li>
                     <li><a href="#avis">Avis</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#quisommesnous">L'Équipe</a></li>
@@ -63,7 +69,7 @@
 
     <div class="mobile-tab-bar">
         <a href="#accueil"><i class="fas fa-home"></i><span>Accueil</span></a>
-        <a href="#produits"><i class="fas fa-bread-slice"></i><span>Produits</span></a>
+        <a href="produits.html"><i class="fas fa-bread-slice"></i><span>Produits</span></a>
         <a href="#avis"><i class="fas fa-star"></i><span>Avis</span></a>
         <a href="#contact"><i class="fas fa-map-marker-alt"></i><span>Accès</span></a>
     </div>
@@ -77,7 +83,7 @@
                 <a href="https://www.facebook.com/Fournil-Des-Freres-107066511878900" target="_blank"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/fournildesfreres34" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
-            <a href="#produits" class="btn-gold-hero">Découvrir nos produits</a>
+            <a href="produits.html" class="btn-gold-hero">Découvrir notre carte snacking</a>
         </div>
     </section>
 
@@ -106,19 +112,22 @@
         <h2 class="title">NOS SPÉCIALITÉS</h2>
         <div class="carousel-container" id="main-carousel">
             <div class="carousel-slide active">
-                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1000" alt="Nos Pains">
-                <div class="carousel-caption">Nos Pains de Tradition</div>
+                <img src="sandwich-poulet-curry-graines.jpg" alt="Sandwich Poulet Curry Maison Montpellier Snacking">
+                <div class="carousel-caption">Nos Sandwichs Gourmands</div>
             </div>
             <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1000" alt="Viennoiseries">
+                <img src="croissant-aux-amandes-montpellier.jpg" alt="Croissant aux amandes pur beurre artisan boulanger">
                 <div class="carousel-caption">Viennoiseries Pur Beurre</div>
             </div>
             <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?q=80&w=1000" alt="Pâtisseries">
+                <img src="entremet-chocolat-brillant.jpg" alt="Entremet au chocolat pâtisserie fine fait maison">
                 <div class="carousel-caption">Pâtisseries Artisanales</div>
             </div>
             <button id="prevBtn" class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
             <button id="nextBtn" class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="produits.html" class="btn-gps" style="display: inline-flex; width: auto; padding: 10px 20px;">Voir toute la carte snacking & desserts</a>
         </div>
     </section>
 
@@ -131,18 +140,23 @@
     </section>
 
     <section id="avis" class="container section reveal">
-        <h2 class="title">VOS AVIS</h2>
-        <div class="reviews-grid">
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p>"La meilleure baguette de Montpellier. Accueil toujours parfait !"</p>
-                <span class="client-name">- Thomas M.</span>
+        <h2 class="title">L'Avis de nos Clients</h2>
+        <div class="google-review-card">
+            <div class="reviewer-info">
+                <div class="avatar">M</div>
+                <div>
+                    <strong>Maxime D.</strong>
+                    <span class="date">il y a 2 semaines</span>
+                </div>
+                <i class="fab fa-google google-logo" style="color: #4285F4; font-size: 1.5rem;"></i>
             </div>
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p>"On sent le vrai travail artisanal. Les croissants sont excellents."</p>
-                <span class="client-name">- Sarah L.</span>
+            <div class="stars">
+                <i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i>
             </div>
+            <p class="review-text">"Une excellente boulangerie ! Leurs sandwichs (surtout celui au poulet curry sur pain aux graines) sont bien garnis et les produits sont frais. Mention spéciale pour le croissant aux amandes. Personnel toujours souriant."</p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=2596+Avenue+de+l'Europe+34080+Montpellier3" target="_blank" class="btn-leave-review" style="color: #1a73e8; font-weight: bold; margin-top: 10px; display: inline-block;">
+                <i class="fas fa-pen"></i> Laissez un avis sur Google
+            </a>
         </div>
     </section>
 
@@ -169,11 +183,9 @@
                 <h3>Envoyer un message</h3>
                 <form action="https://formspree.io/f/xzdyaoab" method="POST">
                     <input type="hidden" name="_next" value="https://jordyepsi.github.io/fournil-des-freres/merci.html">
-                    
                     <input type="text" name="Nom" placeholder="Votre Nom" aria-label="Votre Nom" required>
                     <input type="email" name="Email" placeholder="Votre Email" aria-label="Votre Email" required>
                     <textarea name="Message" placeholder="Votre message ou commande..." aria-label="Votre message ou commande" required></textarea>
-                    
                     <button type="submit" class="btn-gold">ENVOYER LE MESSAGE</button>
                 </form>
                 <a href="tel:+33652292438" class="phone-link-anim">
