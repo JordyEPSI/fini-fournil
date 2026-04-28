@@ -14,14 +14,12 @@ body {
     color: var(--creme); 
     font-family: 'Montserrat', sans-serif; 
     overflow-x: hidden; 
-    padding-bottom: 65px; 
+    padding-bottom: 65px; /* Espace pour la barre mobile */
 }
 a { color: inherit; text-decoration: none; transition: var(--transition); }
 ul { list-style: none; }
 
-/* ==========================================================
-   LOADER & BARRE DE PROGRESSION
-   ========================================================== */
+/* LOADER & BARRE DE PROGRESSION */
 #loader {
     position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
     background-color: var(--noir); display: flex; justify-content: center; align-items: center;
@@ -29,17 +27,13 @@ ul { list-style: none; }
 }
 #loader.hidden { opacity: 0; visibility: hidden; }
 .loader-logo { width: 100px; border-radius: 50%; animation: pulse 1.5s infinite; }
-
-@keyframes pulse {
-    0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7); }
-    70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(197, 160, 89, 0); }
-    100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+@keyframes pulse { 
+    0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7); } 
+    70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(197, 160, 89, 0); } 
+    100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); } 
 }
 
-#scroll-progress-bar {
-    position: fixed; top: 0; left: 0; width: 0%; height: 4px;
-    background-color: var(--or); z-index: 10000; transition: width 0.1s ease;
-}
+#scroll-progress-bar { position: fixed; top: 0; left: 0; width: 0%; height: 4px; background-color: var(--or); z-index: 10000; transition: width 0.1s ease; }
 
 /* CONTENEURS & TITRES */
 .container { max-width: 1100px; margin: auto; padding: 0 1.5rem; }
@@ -56,33 +50,18 @@ header { background: rgba(26,26,27,0.98); padding: 1rem 0; border-bottom: 1px so
 .logo { height: 50px; transition: var(--transition); }
 .logo:hover { transform: scale(1.1); }
 
-/* --- CORRECTION BURGER MENU ALIGNEMENT --- */
-.desktop-nav { width: 0; } /* On réduit la boîte invisible pour ne pas fausser le centrage */
+.desktop-nav { width: 0; } 
 #nav-list { display: none; } 
 
-.menu-toggle { 
-    display: block; 
-    color: var(--or); 
-    font-size: 1.5rem; 
-    cursor: pointer; 
-    margin-left: auto; /* Pousse le burger complètement à droite */
-}
+.menu-toggle { display: block; color: var(--or); font-size: 1.5rem; cursor: pointer; margin-left: auto; }
 .menu-toggle i { transition: 0.4s; }
 .menu-toggle.active i { transform: rotate(180deg); }
 
-/* MENU BURGER ACTIF */
-#nav-list.active {
-    display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; 
-    width: 100%; background: var(--noir); padding: 2rem; border-bottom: 2px solid var(--or); text-align: center;
-}
+#nav-list.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--noir); padding: 2rem; border-bottom: 2px solid var(--or); text-align: center; }
 #nav-list li { margin: 1rem 0; font-weight: bold; }
 
 /* BARRE MOBILE BASSE */
-.mobile-tab-bar {
-    position: fixed; bottom: 0; left: 0; width: 100%; height: 65px; 
-    background: #111; border-top: 1px solid var(--or);
-    display: flex; justify-content: space-around; align-items: center; z-index: 2000;
-}
+.mobile-tab-bar { position: fixed; bottom: 0; left: 0; width: 100%; height: 65px; background: #111; border-top: 1px solid var(--or); display: flex; justify-content: space-around; align-items: center; z-index: 2000; }
 .mobile-tab-bar a { display: flex; flex-direction: column; align-items: center; font-size: 0.7rem; color: white; }
 .mobile-tab-bar a i { font-size: 1.4rem; color: var(--or); margin-bottom: 2px; }
 
@@ -127,6 +106,26 @@ header { background: rgba(26,26,27,0.98); padding: 1rem 0; border-bottom: 1px so
 .faq-question { padding: 1.2rem; cursor: pointer; display: flex; justify-content: space-between; font-weight: bold; color: var(--or); }
 .faq-answer { padding: 1.2rem; display: none; background: rgba(197, 160, 89, 0.1); border-top: 1px solid var(--or); }
 
+/* STYLE DE L'AVIS GOOGLE (Page Accueil) */
+.google-review-card { background: #ffffff; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.reviewer-info { display: flex; align-items: center; gap: 15px; position: relative; margin-bottom: 10px; }
+.reviewer-info .avatar { background-color: #fbbc04; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 1.2rem; }
+.reviewer-info .date { font-size: 0.8rem; color: #777; display: block; }
+.google-logo { position: absolute; right: 0; top: 0; }
+.google-review-card .stars i { color: #fbbc04; font-size: 0.9rem; margin-bottom: 10px; }
+.review-text { font-style: italic; margin-bottom: 15px; font-size: 0.95rem; }
+.btn-leave-review { color: #1a73e8; font-weight: bold; font-size: 0.9rem; }
+.btn-leave-review:hover { text-decoration: underline; }
+
+/* GRILLE PAGE PRODUITS */
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-bottom: 40px; }
+.product-card { background: var(--gris); border-radius: 10px; overflow: hidden; transition: var(--transition); border-bottom: 3px solid var(--or); }
+.product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+.product-card img { width: 100%; height: 220px; object-fit: cover; }
+.product-info { padding: 20px; }
+.product-info h3 { color: var(--or); font-size: 1.2rem; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+.product-info p { font-size: 0.9rem; line-height: 1.4; }
+
 /* CONTACT */
 .contact-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: start; }
 .contact-form h3 { color: var(--or) !important; font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; }
@@ -154,30 +153,24 @@ footer { padding: 4rem 0; text-align: center; border-top: 1px solid var(--or); b
 #backToTop { position: fixed; bottom: 85px; right: 20px; background: var(--or); border: none; padding: 12px; border-radius: 50%; cursor: pointer; display: none; color: var(--noir); z-index: 1000; transition: var(--transition); }
 #backToTop:hover { transform: scale(1.1); background: white; }
 
-/* ==========================================================
-   MEDIA QUERIES : CENTRAGE SPÉCIFIQUE MOBILE
-   ========================================================== */
+/* MEDIA QUERIES : CENTRAGE MOBILE */
 @media (max-width: 991px) {
     .eng-item, .about-content, .review-card, .contact-map { text-align: center; }
     .contact-map p { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 10px; }
     .contact-map p i { margin-bottom: 5px; font-size: 1.2rem; }
 }
 
-/* ==========================================================
-   MEDIA QUERIES : ORDINATEUR
-   ========================================================== */
+/* MEDIA QUERIES : ORDINATEUR */
 @media (min-width: 992px) {
     body { padding-bottom: 0; }
     .mobile-tab-bar, .menu-toggle { display: none !important; }
-    
-    .desktop-nav { width: auto; } /* On redonne sa taille à la boîte sur PC */
+    .desktop-nav { width: auto; } 
     #nav-list { display: flex !important; flex-direction: row; position: static; background: transparent; padding: 0; gap: 20px; }
     #nav-list li { margin: 0; }
     #nav-list a { color: var(--creme) !important; font-weight: bold; font-size: 0.9rem; position: relative; }
     #nav-list a:hover { color: var(--or) !important; }
     #nav-list a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background: var(--or); transition: 0.3s; }
     #nav-list a:hover::after { width: 100%; }
-    
     .hero h1 { font-size: 4.5rem; }
     .carousel-slide img { height: 450px; }
     #backToTop { bottom: 25px; }
