@@ -35,7 +35,80 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. SCROLL PROGRESS & REVEAL
+    // 4. MENU MOBILE
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+    if (menuToggle && navList) {
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+        document.querySelectorAll('#nav-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+                menuToggle.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                if (icon) icon.className = "fas fa-bars";
+            });
+        });
+    }
+
+    // 5. CARROUSEL AVEC SWIPE & RESET
+    const slides = document.querySelectorAll('.carousel-slide');
+    const carouselContainer = document.getElementById('main-carousel');
+    let currentIndex = 0;
+    const showSlide = (n) => {
+        if (slides.length === 0) return;
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (n + slides.length) % slides.length;
+        slides[currentIndex].classList.add('active');
+    };
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    let autoPlay = setInterval(() => showSlide(currentIndex + 1), 5000);
+    
+    const resetInterval = () => {
+        clearInterval(autoPlay);
+        autoPlay = setInterval(() => showSlide(currentIndex + 1), 5000);
+    };
+    
+    if (nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', () => { showSlide(currentIndex + 1); resetInterval(); });
+        prevBtn.addEventListener('click', () => { showSlide(currentIndex - 1); resetInterval(); });
+    }
+    
+    let touchStartX = 0;
+    let touchEndX = 0;
+    if (carouselContainer) {
+        carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            clearInterval(autoPlay);
+        }, {passive: true});
+        carouselContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const swipeDistance = touchEndX - touchStartX;
+            if (Math.abs(swipeDistance) > 50) {
+                if (swipeDistance > 0) showSlide(currentIndex - 1);
+                else showSlide(currentIndex + 1);
+            }
+            autoPlay = setInterval(() => showSlide(currentIndex + 1), 5000);
+        }, {passive: true});
+    }
+
+    // 6. FAQ
+    document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', () => {
+            const answer = q.nextElementSibling;
+            const isVisible = answer.style.display === 'block';
+            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+            answer.style.display = isVisible ? 'none' : 'block';
+        });
+    });
+
+    // 7. SCROLL PROGRESS & REVEAL
     window.addEventListener('scroll', () => {
         const progress = document.getElementById('scroll-progress-bar');
         if (progress) {
@@ -56,11 +129,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const backBtn = document.getElementById('backToTop');
     if (backBtn) backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    // 5. MENU MOBILE
-    const menuToggle = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
-    if (menuToggle && navList) {
-        menuToggle.addEventListener('click', () => navList.classList.toggle('active'));
-    }
 });
