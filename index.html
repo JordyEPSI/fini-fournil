@@ -10,24 +10,20 @@
     
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <!-- FontAwesome pour les icônes (Réseaux, Menu Burger, Étoiles) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Écran de chargement -->
     <div id="loader">
         <img src="logo-fdf.jpg" alt="Chargement" class="loader-logo">
     </div>
 
-    <!-- Barre de progression de défilement -->
     <div id="scroll-progress-bar"></div>
 
     <header id="header">
         <div class="container header-flex">
             <a href="index.html"><img src="logo-fdf.jpg" alt="Logo Fournil des Frères" class="logo"></a>
             
-            <!-- Bouton Burger pour le mobile -->
             <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
             
             <nav class="desktop-nav">
@@ -43,7 +39,6 @@
         </div>
     </header>
 
-    <!-- Barre de navigation rapide en bas sur Téléphone -->
     <div class="mobile-tab-bar">
         <a href="#accueil"><i class="fas fa-home"></i><span>Accueil</span></a>
         <a href="produits.html"><i class="fas fa-bread-slice"></i><span>Produits</span></a>
@@ -65,7 +60,6 @@
             </div>
         </section>
 
-        <!-- L'Équipe (Storytelling) -->
         <section id="equipe" class="container section reveal">
             <h2 class="title">L'Histoire des Frères</h2>
             <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; text-align: justify;">
@@ -86,7 +80,6 @@
             </div>
         </section>
 
-        <!-- Produits Phares -->
         <section id="produits-phares" class="container section reveal">
             <h2 class="title">Nos Spécialités</h2>
             <div class="product-grid">
@@ -116,7 +109,6 @@
             </div>
         </section>
         
-        <!-- Avis Clients Google -->
         <section id="avis" class="container section reveal">
             <h2 class="title">L'Avis de nos Clients</h2>
             <div class="google-review-card">
@@ -129,13 +121,13 @@
                     <i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i>
                 </div>
                 <p class="review-text">"Excellente boulangerie ! Leurs trompe-l'œil sont incroyables, surtout la fève de tonka. Accueil chaleureux."</p>
-                <a href="https://search.google.com/local/writereview?placeid=ChIJKzZ_p7_SthIRu_mXv2V_E0w" target="_blank" class="btn-leave-review">
+                <!-- MISE À JOUR DU LIEN ICI -->
+                <a href="https://www.google.com/maps/place/Fournil+des+frères/@43.641869,3.8200574,17z/data=!4m8!3m7!1s0x12b6ade1ebe841e1:0xa99e64c66c373153!8m2!3d43.641869!4d3.8200574!9m1!1b1!16s%2Fg%2F11tfpc4v9q?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-leave-review">
                     <i class="fas fa-pen"></i> Rédiger un avis sur Google
                 </a>
             </div>
         </section>
 
-        <!-- Foire Aux Questions (FAQ) -->
         <section id="faq" class="container section reveal">
             <h2 class="title">Foire Aux Questions</h2>
             <div class="faq-container">
@@ -154,7 +146,6 @@
             </div>
         </section>
 
-        <!-- Contact & Formulaire complet -->
         <section id="contact" class="container section reveal">
             <h2 class="title">CONTACT & ACCÈS</h2>
             <div class="contact-wrapper">
@@ -196,7 +187,6 @@
         </div>
     </footer>
 
-    <!-- Bouton remonter en haut -->
     <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
