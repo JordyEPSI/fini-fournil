@@ -5,67 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fournil des Frères | Artisan Boulanger Pâtissier Montpellier</title>
     
-    <meta name="description" content="Boulangerie artisanale au 2596 Avenue de l'Europe, Montpellier. Produits 100% maison, tradition et qualité.">
-
-    <link rel="icon" type="image/jpeg" href="FDF_logo.jpg">
+    <meta name="description" content="Découvrez le Fournil des Frères à Montpellier. Trompe l'œil signatures, snacking frais et viennoiseries artisanales 100% fait maison.">
+    <link rel="icon" type="image/jpeg" href="logo-fdf.jpg">
+    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- FontAwesome pour les icônes (Réseaux, Menu Burger, Étoiles) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Bakery",
-      "name": "Fournil des Frères",
-      "image": "https://jordyepsi.github.io/fournil-des-freres/FDF_logo.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2596 Avenue de l'Europe",
-        "addressLocality": "Montpellier",
-        "postalCode": "34080",
-        "addressCountry": "FR"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "134"
-      },
-      "openingHours": "Mo-Fr 06:00-20:00, Sa-Su 07:00-20:00",
-      "telephone": "+33652292438"
-    }
-    </script>
 </head>
 <body>
 
+    <!-- Écran de chargement -->
     <div id="loader">
-        <img src="FDF_logo.jpg" alt="Chargement Fournil des Frères" class="loader-logo">
+        <img src="logo-fdf.jpg" alt="Chargement" class="loader-logo">
     </div>
 
+    <!-- Barre de progression de défilement -->
     <div id="scroll-progress-bar"></div>
 
     <header id="header">
         <div class="container header-flex">
-            <div class="logo-area">
-                <a href="index.html"><img src="FDF_logo.jpg" alt="Logo Fournil des Frères" class="logo"></a>
-            </div>
+            <a href="index.html"><img src="logo-fdf.jpg" alt="Logo Fournil des Frères" class="logo"></a>
             
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-
+            <!-- Bouton Burger pour le mobile -->
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+            
             <nav class="desktop-nav">
                 <ul id="nav-list">
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="produits.html">Nos Produits</a></li>
-                    <li><a href="#avis">Avis</a></li>
+                    <li><a href="#equipe">L'Équipe</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#quisommesnous">L'Équipe</a></li>
+                    <li><a href="#avis">Avis</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Barre de navigation rapide en bas sur Téléphone -->
     <div class="mobile-tab-bar">
         <a href="#accueil"><i class="fas fa-home"></i><span>Accueil</span></a>
         <a href="produits.html"><i class="fas fa-bread-slice"></i><span>Produits</span></a>
@@ -73,163 +51,152 @@
         <a href="#contact"><i class="fas fa-map-marker-alt"></i><span>Accès</span></a>
     </div>
 
-    <section id="accueil" class="hero">
-        <div class="hero-text">
-            <div id="status-badge" class="status-badge">Chargement...</div>
-            <h1>Fournil des Frères</h1>
-            <p>L'excellence artisanale à Montpellier</p>
-            <div class="social-hero">
-                <a href="https://www.facebook.com/Fournil-Des-Freres-107066511878900" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/fournildesfreres34" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@fournildesfreres" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <main>
+        <section id="accueil" class="hero">
+            <div class="hero-text">
+                <div id="status-badge" class="status-badge">Chargement...</div>
+                <h1>L'excellence artisanale à Montpellier</h1>
+                <div class="social-hero">
+                    <a href="https://www.facebook.com/Fournil-Des-Freres-107066511878900" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/fournildesfreres34" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@fournildesfreres" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <a href="produits.html" class="btn-gold-hero">Découvrir la carte</a>
             </div>
-            <a href="produits.html" class="btn-gold-hero">Découvrir notre carte snacking</a>
-        </div>
-    </section>
+        </section>
 
-    <section class="container section reveal">
-        <h2 class="title">Nos Engagements</h2>
-        <div class="engagements-grid">
-            <div class="eng-item">
-                <i class="fas fa-hand-holding-heart"></i>
-                <h3>100% Fait Maison</h3>
-                <p>Nos viennoiseries sont pétries et façonnées sur place chaque matin.</p>
-            </div>
-            <div class="eng-item">
-                <i class="fas fa-leaf"></i>
-                <h3>Farines Locales</h3>
-                <p>Nous travaillons avec des meuniers régionaux pour un circuit court.</p>
-            </div>
-            <div class="eng-item">
-                <i class="fas fa-certificate"></i>
-                <h3>Levain Naturel</h3>
-                <p>Pour un pain de tradition sain, digeste et savoureux.</p>
-            </div>
-        </div>
-    </section>
+        <!-- L'Équipe (Storytelling) -->
+        <section id="equipe" class="container section reveal">
+            <h2 class="title">L'Histoire des Frères</h2>
+            <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; text-align: justify;">
+                <p style="margin-bottom: 15px;">L’histoire du <strong>Fournil des Frères</strong> prend racine à Ajaccio, où trois frères grandissent avec une passion commune pour les métiers de bouche et le goût du travail bien fait.</p>
+                
+                <p style="margin-bottom: 15px;">Chacun suit alors sa propre voie pour se spécialiser :</p>
+                <ul style="margin-bottom: 15px; padding-left: 20px; list-style-type: square; color: var(--or);">
+                    <li><span style="color: var(--creme);">L’un se forme et obtient son diplôme en boulangerie et viennoiserie, développant une maîtrise des pâtes et des fermentations ;</span></li>
+                    <li><span style="color: var(--creme);">Le second devient pâtissier chocolatier, animé par la précision et la créativité ;</span></li>
+                    <li><span style="color: var(--creme);">Tandis que le troisième se dirige vers le marketing et le management, apportant une vision stratégique et moderne du commerce.</span></li>
+                </ul>
 
-    <section id="produits" class="container section reveal">
-        <h2 class="title">NOS SPÉCIALITÉS</h2>
-        <div class="carousel-container" id="main-carousel">
-            <div class="carousel-slide active">
-                <img src="sandwich-poulet-curry-graines.jpg" alt="Nos Sandwichs">
-                <div class="carousel-caption">Nos Sandwichs Gourmands</div>
+                <p style="margin-bottom: 15px;">Portés par l’envie d’entreprendre ensemble et de valoriser leur complémentarité, ils décident en 2011 de s’installer à Montpellier pour donner naissance au Fournil des Frères.</p>
+                
+                <p style="margin-bottom: 15px;">Depuis sa création, la maison s’attache à défendre un savoir-faire artisanal authentique, en sélectionnant des matières premières de qualité et en respectant les méthodes traditionnelles. Chaque produit est pensé avec exigence, générosité et passion, afin d’offrir une expérience gourmande sincère et mémorable.</p>
+                
+                <p>Au fil des années, le Fournil des Frères s’est imposé comme une adresse incontournable, alliant tradition et créativité. Toujours en quête d’innovation, les trois frères revisitent les classiques de la boulangerie et de la pâtisserie, tout en restant fidèles à leurs valeurs : <strong>partage, authenticité et excellence</strong>.</p>
             </div>
-            <div class="carousel-slide">
-                <img src="croissant-beurre-frais-artisan.jpg" alt="Viennoiseries">
-                <div class="carousel-caption">Viennoiseries Pur Beurre</div>
-            </div>
-            <div class="carousel-slide">
-                <img src="entremet-chocolat-brillant.jpg" alt="Pâtisseries">
-                <div class="carousel-caption">Pâtisseries Artisanales</div>
-            </div>
-            <button id="prevBtn" class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-            <button id="nextBtn" class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
-        </div>
-        <div style="text-align: center; margin-top: 20px;">
-            <a href="produits.html" class="btn-gps" style="display: inline-flex; width: auto; padding: 10px 20px;">Voir toute la carte</a>
-        </div>
-    </section>
+        </section>
 
-    <!-- TA SECTION "L'HISTOIRE DES FRÈRES" EST BIEN LÀ -->
-    <section id="quisommesnous" class="container section reveal">
-        <div class="about-content">
-            <h2 class="title-left">L'Histoire des Frères</h2>
-            <p>Le Fournil des Frères est une aventure familiale née de la passion du pain. Nous préservons l'artisanat traditionnel à Montpellier Nord.</p>
-            <span class="tradition-tag">Tradition & Passion</span>
-        </div>
-    </section>
+        <!-- Produits Phares -->
+        <section id="produits-phares" class="container section reveal">
+            <h2 class="title">Nos Spécialités</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="trompe-loeil-feve-tonka.webp" alt="Fève de Tonka" loading="lazy">
+                    <div class="product-info">
+                        <h3>Trompe l'œil Tonka</h3>
+                        <p>Un dessert d'exception aux notes chaudes et vanillées.</p>
+                    </div>
+                </article>
 
-    <!-- SECTION AVIS GOOGLE (Vrai popup) -->
-    <section id="avis" class="container section reveal">
-        <h2 class="title">L'Avis de nos Clients</h2>
-        <div class="google-review-card">
-            <div class="reviewer-info">
-                <div class="avatar">M</div>
-                <div><strong>Maxime D.</strong><span class="date">il y a 2 semaines</span></div>
-                <i class="fab fa-google google-logo" style="color: #4285F4; font-size: 1.5rem;"></i>
-            </div>
-            <div class="stars">
-                <i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i>
-            </div>
-            <p class="review-text">"Excellente boulangerie ! Leurs trompe-l'œil sont incroyables, surtout la fève de tonka. Accueil chaleureux."</p>
-            <a href="https://search.google.com/local/writereview?placeid=ChIJ4U_oT_DSthIRUwWz5p_R8vA" target="_blank" class="btn-leave-review">
-                <i class="fas fa-pen"></i> Rédiger un avis sur Google
-            </a>
-        </div>
-    </section>
+                <article class="product-card">
+                    <img src="sandwich-poulet-curry-graines.webp" alt="Sandwich Poulet Curry" loading="lazy">
+                    <div class="product-info">
+                        <h3>Le Poulet Curry</h3>
+                        <p>Baguette aux graines, émincé de poulet au curry maison.</p>
+                    </div>
+                </article>
 
-    <section id="faq" class="bg-alt reveal">
-        <div class="container section">
-            <h2 class="title">FAQ</h2>
+                <article class="product-card">
+                    <img src="croissant-beurre-frais-artisan.webp" alt="Croissant au Beurre" loading="lazy">
+                    <div class="product-info">
+                        <h3>Croissant au Beurre</h3>
+                        <p>Viennoiserie classique pur beurre, feuilletage artisanal.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <!-- Avis Clients Google -->
+        <section id="avis" class="container section reveal">
+            <h2 class="title">L'Avis de nos Clients</h2>
+            <div class="google-review-card">
+                <div class="reviewer-info">
+                    <div class="avatar">M</div>
+                    <div><strong>Maxime D.</strong><span class="date">il y a 2 semaines</span></div>
+                    <i class="fab fa-google google-logo" style="color: #4285F4; font-size: 1.5rem;"></i>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i><i class="fas fa-star" style="color: #fbbc04;"></i>
+                </div>
+                <p class="review-text">"Excellente boulangerie ! Leurs trompe-l'œil sont incroyables, surtout la fève de tonka. Accueil chaleureux."</p>
+                <a href="https://search.google.com/local/writereview?placeid=ChIJKzZ_p7_SthIRu_mXv2V_E0w" target="_blank" class="btn-leave-review">
+                    <i class="fas fa-pen"></i> Rédiger un avis sur Google
+                </a>
+            </div>
+        </section>
+
+        <!-- Foire Aux Questions (FAQ) -->
+        <section id="faq" class="container section reveal">
+            <h2 class="title">Foire Aux Questions</h2>
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">Prenez-vous des commandes pour gâteaux ? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Oui ! Contactez-nous 48h à l'avance par téléphone ou via le formulaire.</div>
+                    <div class="faq-question">Prenez-vous les commandes pour les événements ? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Oui, tout à fait ! N'hésitez pas à nous contacter via le formulaire ci-dessous ou par téléphone pour discuter de vos besoins en mignardises, pièces montées ou buffets salés.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Quels sont vos jours d'ouverture ? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Nous sommes ouverts 7j/7, de 6h (7h le WE) à 20h.</div>
+                    <div class="faq-question">Vos produits sont-ils 100% fait maison ? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Absolument. De la pâte de nos croissants à l'insert de nos trompe-l'œil, tout est confectionné sur place par nos artisans avec des matières premières soigneusement sélectionnées.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Avez-vous des options végétariennes ? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Oui, nous proposons chaque jour plusieurs recettes végétariennes dans notre vitrine snacking (sandwichs, quiches, pizzas).</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="container section reveal">
-        <h2 class="title">CONTACT & ACCÈS</h2>
-        <div class="contact-wrapper">
-            <div class="contact-form">
-                <h3>Envoyer un message</h3>
-                
-                <!-- ENVOI PDF ACTIVÉ -->
-                <form action="https://formspree.io/f/xzdyaoab" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="_next" value="https://jordyepsi.github.io/fournil-des-freres/merci.html">
-                    <input type="text" name="Nom" placeholder="Votre Nom" aria-label="Votre Nom" required>
-                    <input type="email" name="Email" placeholder="Votre Email" aria-label="Votre Email" required>
-                    <textarea name="Message" placeholder="Votre message ou commande..." aria-label="Votre message ou commande" required></textarea>
-                    
-                    <div class="file-upload-wrapper">
-                        <label for="file-upload" class="custom-file-upload">
-                            <i class="fas fa-cloud-upload-alt"></i> Joindre un CV (PDF uniquement)
-                        </label>
-                        <!-- 'name="upload"' est requis par Formspree pour les fichiers -->
-                        <input id="file-upload" type="file" name="upload" accept=".pdf" />
-                        <span id="file-name-display">Aucun fichier choisi</span>
-                    </div>
-
-                    <button type="submit" class="btn-gold">ENVOYER LE MESSAGE</button>
-                </form>
-
-                <a href="tel:+33652292438" class="phone-link-anim">
-                    <i class="fas fa-phone"></i> 06 52 29 24 38
-                </a>
+        <!-- Contact & Formulaire complet -->
+        <section id="contact" class="container section reveal">
+            <h2 class="title">CONTACT & ACCÈS</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>Postuler ou nous écrire</h3>
+                    <form action="https://formspree.io/f/xzdyaoab" method="POST" enctype="multipart/form-data">
+                        <input type="text" name="Nom" placeholder="Votre Nom" required>
+                        <input type="email" name="Email" placeholder="Votre Email" required>
+                        <textarea name="Message" placeholder="Votre message..." required></textarea>
+                        
+                        <div class="file-upload-wrapper">
+                            <label for="file-upload" class="custom-file-upload">
+                                <i class="fas fa-cloud-upload-alt"></i> Joindre un CV (PDF uniquement)
+                            </label>
+                            <input id="file-upload" type="file" name="upload" accept=".pdf" />
+                            <span id="file-name-display">Aucun fichier choisi</span>
+                        </div>
+                        <button type="submit" class="btn-gold">ENVOYER</button>
+                    </form>
+                </div>
+                <div class="contact-map">
+                    <h3>Localisation</h3>
+                    <p><i class="fas fa-map-marker-alt" style="color:var(--or);"></i> 2596 Avenue de l'Europe, 34080 Montpellier</p>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Fournil+des+Frères,+2596+Avenue+de+l'Europe,+Montpellier2" target="_blank" class="btn-gps">
+                        <i class="fas fa-location-arrow" style="margin-right:8px;"></i> Itinéraire Google Maps
+                    </a>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.665672101344!2d3.834015!3d43.613479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6b3bfb77f362b%3A0x4c137f65bf97f9bb!2sFournil%20des%20Fr%C3%A8res!5e0!3m2!1sfr!2sfr!4v1710000000000!5m2!1sfr!2sfr" width="100%" height="250" style="border:0; border-radius:10px; margin-top:15px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
-            
-            <div class="contact-map">
-                <h3>Horaires & Localisation</h3>
-                <p><i class="fas fa-clock"></i> Lun-Ven : 06h-20h / Sam-Dim : 07h-20h</p>
-                <p><i class="fas fa-map-marker-alt"></i> 2596 Avenue de l'Europe, Montpellier</p>
-                
-                <a href="https://www.google.com/maps/dir//Fournil+des+Frères+2596+Avenue+de+l'Europe+Montpellier" target="_blank" class="btn-gps">
-                    <i class="fas fa-location-arrow"></i> Itinéraire Google Maps
-                </a>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.5830959441164!2d3.824709!3d43.6152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af0836c4b92b%3A0x6b4f7a78377f0a3e!2sFournil%20des%20Fr%C3%A8res!5e0!3m2!1sfr!2sfr!4v1680000000000!5m2!1sfr!2sfr" width="100%" height="250" style="border:0; border-radius:10px; margin-top:15px;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <div class="container footer-content">
-            <p>© 2026 Fournil des Frères | Montpellier</p>
-            <p class="credits">Projet réalisé par RAHANTANIRINA Anjara</p>
-            <div class="footer-socials">
-                <a href="https://www.facebook.com/Fournil-Des-Freres-107066511878900" target="_blank" class="social-circle-footer"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/fournildesfreres34" target="_blank" class="social-circle-footer"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@fournildesfreres" target="_blank" class="social-circle-footer"><i class="fab fa-tiktok"></i></a>
-            </div>
+        <p>© 2026 Fournil des Frères | Projet de stage réalisé par RAHANTANIRINA Anjara</p>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/Fournil-Des-Freres-107066511878900" target="_blank" class="social-circle-footer"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fournildesfreres34" target="_blank" class="social-circle-footer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@fournildesfreres" target="_blank" class="social-circle-footer"><i class="fab fa-tiktok"></i></a>
         </div>
     </footer>
 
+    <!-- Bouton remonter en haut -->
     <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
