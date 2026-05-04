@@ -1,19 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. LOADER
+    // 1. LOADER (Disparaît après 1 seconde)
     setTimeout(() => {
         const loader = document.getElementById('loader');
-        if (loader) loader.style.display = 'none';
-    }, 1200);
+        if (loader) {
+            loader.style.opacity = '0';
+            setTimeout(() => loader.style.display = 'none', 600);
+        }
+    }, 1000);
 
-    // 2. STATUT OUVERTURE
+    // 2. STATUT OUVERTURE (Pastille Verte/Rouge)
     const updateStatus = () => {
         const badge = document.getElementById('status-badge');
         if (!badge) return;
         const now = new Date();
         const hour = now.getHours();
         const day = now.getDay();
-        const openTime = (day === 0 || day === 6) ? 7 : 6;
+        // Ouvre à 7h le weekend (0 = Dimanche, 6 = Samedi), sinon 6h en semaine
+        const openTime = (day === 0 || day === 6) ? 7 : 6; 
+        
         if (hour >= openTime && hour < 20) {
             badge.innerText = "● OUVERT ACTUELLEMENT";
             badge.className = "status-badge open";
@@ -24,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     updateStatus();
 
-    // 3. NOM DU PDF SELECTIONNÉ
+    // 3. NOM DU FICHIER PDF (Formulaire Contact)
     const fileInput = document.getElementById('file-upload');
     const fileNameDisplay = document.getElementById('file-name-display');
     if (fileInput && fileNameDisplay) {
@@ -35,81 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. MENU MOBILE
-    const menuToggle = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
-    if (menuToggle && navList) {
-        menuToggle.addEventListener('click', () => {
-            navList.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
-        });
-        document.querySelectorAll('#nav-list a').forEach(link => {
-            link.addEventListener('click', () => {
-                navList.classList.remove('active');
-                menuToggle.classList.remove('active');
-                const icon = menuToggle.querySelector('i');
-                if (icon) icon.className = "fas fa-bars";
-            });
-        });
-    }
-
-    // 5. CARROUSEL AVEC SWIPE & RESET
-    const slides = document.querySelectorAll('.carousel-slide');
-    const carouselContainer = document.getElementById('main-carousel');
-    let currentIndex = 0;
-    const showSlide = (n) => {
-        if (slides.length === 0) return;
-        slides[currentIndex].classList.remove('active');
-        currentIndex = (n + slides.length) % slides.length;
-        slides[currentIndex].classList.add('active');
-    };
-    const nextBtn = document.getElementById('nextBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    let autoPlay = setInterval(() => showSlide(currentIndex + 1), 5000);
-    
-    const resetInterval = () => {
-        clearInterval(autoPlay);
-        autoPlay = setInterval(() => showSlide(currentIndex + 1), 5000);
-    };
-    
-    if (nextBtn && prevBtn) {
-        nextBtn.addEventListener('click', () => { showSlide(currentIndex + 1); resetInterval(); });
-        prevBtn.addEventListener('click', () => { showSlide(currentIndex - 1); resetInterval(); });
-    }
-    
-    let touchStartX = 0;
-    let touchEndX = 0;
-    if (carouselContainer) {
-        carouselContainer.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-            clearInterval(autoPlay);
-        }, {passive: true});
-        carouselContainer.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            const swipeDistance = touchEndX - touchStartX;
-            if (Math.abs(swipeDistance) > 50) {
-                if (swipeDistance > 0) showSlide(currentIndex - 1);
-                else showSlide(currentIndex + 1);
-            }
-            autoPlay = setInterval(() => showSlide(currentIndex + 1), 5000);
-        }, {passive: true});
-    }
-
-    // 6. FAQ
-    document.querySelectorAll('.faq-question').forEach(q => {
-        q.addEventListener('click', () => {
-            const answer = q.nextElementSibling;
-            const isVisible = answer.style.display === 'block';
-            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-            answer.style.display = isVisible ? 'none' : 'block';
-        });
-    });
-
-    // 7. SCROLL PROGRESS & REVEAL
+    // 4. SCROLL PROGRESS BAR ET ANIMATIONS "REVEAL"
     window.addEventListener('scroll', () => {
+        // Barre de progression en haut
         const progress = document.getElementById('scroll-progress-bar');
         if (progress) {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -117,16 +50,57 @@ document.addEventListener('DOMContentLoaded', () => {
             progress.style.width = (winScroll / height) * 100 + "%";
         }
 
+        // Fait apparaître les éléments au défilement
         document.querySelectorAll('.reveal').forEach(el => {
             if (el.getBoundingClientRect().top < window.innerHeight - 100) {
                 el.classList.add('active');
             }
         });
 
+        // Affiche/Cache le bouton retour en haut
         const backBtn = document.getElementById('backToTop');
-        if (backBtn) backBtn.style.display = window.scrollY > 400 ? "block" : "none";
+        if (backBtn) {
+            backBtn.style.display = window.scrollY > 500 ? "block" : "none";
+        }
     });
 
+    // Action du bouton retour en haut
     const backBtn = document.getElementById('backToTop');
-    if (backBtn) backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    if (backBtn) {
+        backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    // 5. MENU BURGER MOBILE
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+    if (menuToggle && navList) {
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+        
+        // Ferme le menu quand on clique sur un lien
+        document.querySelectorAll('#nav-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+    }
+
+    // 6. ACCORDÉON FAQ
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.nextElementSibling;
+            const icon = item.querySelector('i');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.style.display = 'block';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
 });
